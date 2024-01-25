@@ -103,14 +103,23 @@ function updateScores() {
     currentTurn=1
     player1Section.classList.remove('player--active')
     player2Section.classList.add('player--active')
-    if(player1Score>30){
+    console.log( 'playe1score', player1Score)
+
+    if(Number(player1Score)>30){
+        console.log('entro')
+        alerta.style.display='block'
+        alerta.style.zIndex=10
         alerta.style.fontSize ='6rem'
-        alerta.textContent = 'ha ganado el jugador 1'
+        alerta.innerHTML = '<h1>ha ganado el jugador 1</h1>'
         setTimeout(()=>{
             alerta.style.fontSize ='2rem'
             alerta.textContent = ''
-        },2000)
+            alerta.style.display='none'
+            newGameBtn.click()
+
+        },3000)
     }
+
     return
     
 
@@ -123,12 +132,17 @@ function updateScores() {
     currentTurn=0
     player2Section.classList.remove('player--active')
     player1Section.classList.add('player--active')
+    console.log( 'playe2score', player2Score)
     if(player2Score>30){
+        alerta.style.display='block'
+        alerta.style.zIndex=10
         alerta.style.fontSize ='6rem'
-        alerta.textContent = 'ha ganado el jugador 2'
+        alerta.innerHTML = '<h1>ha ganado el jugador 2</h1>'
         setTimeout(()=>{
             alerta.style.fontSize ='2rem'
             alerta.textContent = ''
+            alerta.style.display='none'
+            newGameBtn.click()
         },2000)
     }
     return
