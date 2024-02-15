@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsmin": "^1.0.1",
     "minify": "^11.0.1"
   }
 }
