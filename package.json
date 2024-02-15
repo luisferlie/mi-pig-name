@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo Hola",
-    "deploy":"rsync -avh --exclude=node_modules -e 'ssh -p 22123' . luis@luis.certweb.infenlaces.com:./pig-game"
-
+    "deploy": "rsync -avh --exclude=node_modules -e 'ssh -p 22123' . luis@luis.certweb.infenlaces.com:./pig-game"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
@@ -17,5 +16,8 @@
     "prettier": "^3.1.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "minify": "^11.0.1"
+  }
 }

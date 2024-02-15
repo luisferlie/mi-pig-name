@@ -1,12 +1,9 @@
 # proyecto-pig-game
+- he añadido el programa que hice en su dia,que es basicamente muy parecido ,le he añadido una 	 zona de mensajes para comunicar(winner...).Se gana al llegar a 30.
 
+el link en servidor:     https://luis.certweb.infenlaces.com/pig-game/
+el link de github        https://github.com/luisferlie/mi-pig-name
 
-- Fork del repositorio
-- git clone para tenerlo en local
-- Añadimos el proyecto dentro de gitKraken
-- Abrimos la carpeta del proyecto dentro de Visual Code y con su terminal ejecutamos npm install
-- La documentación la tenemos en Obsidian en el apartado 4.Fundamentos del DOM
-- Añadir script llamado deploy para el envio del programa al servidor en la nube (se asocia al rsync)
 
 ## opcional
 
