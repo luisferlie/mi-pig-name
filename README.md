@@ -5,6 +5,10 @@ el link en servidor:     https://luis.certweb.infenlaces.com/pig-game/
 el link de github        https://github.com/luisferlie/mi-pig-name
 
 
+
+se instala minify con npm install minify y sepliaca a css/js
+
+
 ## opcional
 
 - Añadir script llamado build para que haga un minify del css, html y javascript
