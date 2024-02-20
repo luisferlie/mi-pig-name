@@ -24,10 +24,11 @@ let player1CurrentScore = 0
 let player2CurrentScore = 0
 
 init()
+
 newGameBtn.addEventListener('click', init)
 rollDiceBtn.addEventListener('click', play)
 holdBtn.addEventListener('click', updateScores)
-
+//funcion inicializacion del juego
 function init() {
   currentTurn = 0 /* 0 es para el jugador 1 y 1 para el 2*/
  
@@ -40,7 +41,7 @@ function init() {
   player1ScoreEl.textContent = 0
   player2ScoreEl.textContent = 0
 }
-
+//funcion que genera el numero aleatorio en el dado
 function randomDiceGen() {
   return Math.floor(Math.random() * 6) + 1 /*devuelve un numero*/
 }
@@ -53,6 +54,8 @@ function play() {
   console.log(num)
 
   if (currentTurn === 0) {
+    //si sale 1 se pierde lo acumulado en la jugada y se genera una alerta
+    //que dura 2 segundos y se pierde turno ,se cambian tb la clase de jugador activo
     if (num == 1) {
     diceImg.src = `dice-${num}.png`
       alerta.textContent = 'pierdes turno'
@@ -67,6 +70,7 @@ function play() {
       currentTurn = 1
       return
     }
+    //si sale cualquier otro numero se añaden los puntos a sumar al jugador y se muestra el dado
     if (num !== 1) {
       diceImg.src = `dice-${num}.png`
       player1CurrentScore += num
@@ -93,6 +97,9 @@ function play() {
     }
   }
 }
+//se actualizan la puntuacion(usado al hacer click en hold button) cambiando de jugador
+// y cambiando clases de jugador activo,se verifica si se ha llgado a 30  ganando el juego
+//generando alerta de juego ganado
 function updateScores() {
     console.log('currentTurn actualizando',currentTurn)
   if (currentTurn==0) {
